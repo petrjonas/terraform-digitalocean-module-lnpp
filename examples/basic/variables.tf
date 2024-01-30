@@ -4,16 +4,16 @@ variable "do_token" {
 
 variable "region" {
   type    = string
-  default = "nyc1"
+  default = "fra1"
 }
 
 variable "vm_count" {
   type        = number
   default     = 2
-  description = "Número de máquinas para o wordpress"
+  description = "Numbr of the instances"
 
   validation {
     condition     = var.vm_count > 1
-    error_message = "O número mínimo de máquinas é 2"
+    error_message = "number of droplet instances has to be greater than 2"
   }
 }
