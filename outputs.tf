@@ -1,23 +1,23 @@
 
 
-output "wp_lb_ip" {
+output "lb_ip" {
   value = digitalocean_loadbalancer.lb.ip
-  description = "IP do Load Balancer"
+  description = "IP if load Balancer"
 }
 
-output "wp_vm_ips" {
+output "vm_ips" {
   value = digitalocean_droplet.vm_linux[*].ipv4_address
-  description = "IPs das máquinas Wordpress"
+  description = "IPs of the droplets"
 }
 
 
-output "wp_db_user" {
+output "db_user" {
   value = digitalocean_database_user.database_user.name
-  description = "Usuário do banco de dados"
+  description = "Username in the database"
 }
 
-output "wp_db_pwd" {
+output "db_pwd" {
   value = digitalocean_database_user.database_user.password
-  description = "Senha do banco de dados"
+  description = "User passwortd in the database"
    sensitive = true
 }

@@ -1,20 +1,20 @@
-output "stack_wp_lb_ip" {
-  value       = module.lnpp.wp_lb_ip
+output "stack_lb_ip" {
+  value       = module.lnpp.lb_ip
   description = "IP do Load Balancer"
 }
 
-output "stack_wp_vm_ips" {
-  value       = module.lnpp.wp_vm_ips
-  description = "IPs das máquinas Wordpress"
+output "stack_vm_ips" {
+  value       = module.lnpp.vm_ips
+  description = "IPs of the droplets"
 }
 
-output "stack_wp_db_user" {
-  value       = module.lnpp.wp_db_user
-  description = "Usuário do banco de dados"
+output "stack_db_user" {
+  value       = module.lnpp.db_user
+  description = "Username to Database"
 }
 
-output "stack_wp_db_pwd" {
-  value       = module.lnpp.wp_db_pwd
-  description = "Senha do banco de dados"
+output "stack_db_pwd" {
+  value       = module.lnpp.db_pwd
+  description = "User password"
   sensitive   = true
 }
